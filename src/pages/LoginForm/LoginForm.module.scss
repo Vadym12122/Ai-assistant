@@ -1,0 +1,65 @@
+.form {
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+
+    &__input {
+        border-radius: 5px;
+        padding: 20px 15px;
+        font-size: 16px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        transition: border-color 0.3s, box-shadow 0.3s;
+        outline: none;
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+
+        &:focus {
+            border-color: #12c287;
+            box-shadow: 0 0 5px rgba(7, 192, 158, 0.5);
+        }
+
+        &.invalid {
+            border-color: #e74c3c;
+            box-shadow: 0 0 5px rgba(231, 76, 60, 0.5);
+        }
+
+        &:disabled {
+            background-color: #f0f0f0;
+            cursor: not-allowed;
+        }
+    }
+
+    &__label {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__button {
+        background: #12c287;
+        padding: 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: all 0.3s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                background: #07a873;
+            }
+        }
+    }
+}
+
+.errorMessage {
+    color: #e74c3c;
+    font-size: 16px;
+    font-weight: 600;
+}

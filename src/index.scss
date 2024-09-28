@@ -1,0 +1,19 @@
+html,
+body {
+    height: 100%; // Висота для html і body
+    margin: 0; // Вимкнення відступів
+    padding: 0; // Вимкнення внутрішніх відступів
+}
+
+#root {
+    height: 100%; // Мінімальна висота для root
+}
+
+.App {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
