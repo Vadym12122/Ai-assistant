@@ -1,0 +1,19 @@
+.auth {
+    font-size: 18px;
+    text-align: center;
+
+    &__button {
+        background: #9bfada;
+        padding: 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: all 0.3s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                background: rgb(135, 254, 214);
+            }
+        }
+    }
+}

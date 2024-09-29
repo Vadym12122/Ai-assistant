@@ -100,6 +100,48 @@
       "email": "vadimkotelets585@gmail.com",
       "password": "1321",
       "rememberMe": true
+    },
+    {
+      "id": "9f39",
+      "email": "vadimkotelets585@gmail.com",
+      "password": "100000333333",
+      "rememberMe": false
+    },
+    {
+      "id": "9f50",
+      "username": "Vadim",
+      "email": "vadimkotelets585@gmail.com",
+      "password": "Terlkabot0987654321"
+    },
+    {
+      "id": "6a35",
+      "username": "Vadim",
+      "email": "vadimkotelets585@gmail.com",
+      "password": "Terlkabot0987654321"
+    },
+    {
+      "id": "8d4a",
+      "username": "Vadim",
+      "email": "vadimkotelets585@gmail.com",
+      "password": "Terlkabot0987654321"
+    },
+    {
+      "id": "9444",
+      "username": "Vadim",
+      "email": "vadimkotelets585@gmail.com",
+      "password": "Terlkabot0987654321"
+    },
+    {
+      "id": "2e53",
+      "username": "Vadym",
+      "email": "vadimkotelets585@gmail.com",
+      "password": "Terlkabot555"
+    },
+    {
+      "id": "7b6a",
+      "username": "Vadym",
+      "email": "vadimkotelets585@gmail.com",
+      "password": "Terlkabot1230"
     }
   ]
 }

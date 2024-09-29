@@ -56,6 +56,15 @@
             }
         }
     }
+
+    &__redirect {
+        display: flex;
+        gap: 10px;
+    }
+
+    &__link {
+        color: #12c287;
+    }
 }
 
 .errorMessage {

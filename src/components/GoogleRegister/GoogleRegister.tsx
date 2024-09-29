@@ -1,10 +1,9 @@
-import React from "react";
-import { GoogleLogin } from "@react-oauth/google"; // Імпортуємо компонент GoogleLogin
-import { jwtDecode } from "jwt-decode"; // Для декодування токенів
-import styles from "./GoogleAuth.module.scss";
+import React, { useState } from "react";
+import { GoogleLogin } from "@react-oauth/google";
+import { jwtDecode } from "jwt-decode";
 
-const GoogleAuth: React.FC = () => {
-    // Обробка успішного входу
+const GoogleRegister: React.FC = () => {
+    const [message, setMessage] = useState("");
 
     // Описуємо структуру токена
     interface GoogleJwtPayload {
@@ -30,31 +29,23 @@ const GoogleAuth: React.FC = () => {
                 },
                 body: JSON.stringify({ username: name, email }), // Додайте інші поля за потреби
             });
+            setMessage("Реєстрація успішна!"); // Відображаємо повідомлення про успіх
+        } else {
+            setMessage("Користувач з таким email вже існує!"); // Повідомлення про існуючий обліковий запис
         }
-
-        // Збереження токену в localStorage
-        localStorage.setItem("token", response.credential);
-
-        // Перенаправлення на головну сторінку після успішного входу
-        window.location.href = "/";
     };
 
-    // Обробка помилки при вході
-
     const handleError = () => {
-        console.error("Error during Google Sign-In");
+        setMessage("Сталася помилка при реєстрації!"); // Повідомлення про помилку
     };
 
     return (
         <div>
-            <h2 className={styles.auth}>Увійти через Google</h2>
-
-            <GoogleLogin
-                onSuccess={handleSuccess} // Функція для обробки успішного входу
-                onError={handleError} // Функція для обробки помилок
-            />
+            <h2>Реєстрація через Google</h2>
+            <GoogleLogin onSuccess={handleSuccess} onError={handleError} />
+            {message && <p>{message}</p>}
         </div>
     );
 };
 
-export default GoogleAuth;
+export default GoogleRegister;

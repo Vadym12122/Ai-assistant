@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "./LoginForm.module.scss";
 import GoogleAuth from "../../components/GoogleAuth/GoogleAuth";
+import { Link } from "react-router-dom";
 
 const LoginForm: React.FC = () => {
     const [email, setEmail] = useState<string>("");
@@ -99,13 +100,22 @@ const LoginForm: React.FC = () => {
                     />
                     <span>Запам'ятати мене</span>
                 </label>
+
                 {error && <p className={styles.errorMessage}>{error}</p>}
+
                 <button className={styles.form__button} type="submit">
                     Увійти
                 </button>
             </form>
 
             <GoogleAuth />
+
+            <p className={styles.form__redirect}>
+                Немає акаунту?
+                <Link className={styles.form__link} to="/register">
+                    Зареєструватися
+                </Link>
+            </p>
         </div>
     );
 };

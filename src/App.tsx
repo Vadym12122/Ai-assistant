@@ -6,6 +6,7 @@ import LoginForm from "./pages/LoginForm/LoginForm";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 import GoogleAuth from "./components/GoogleAuth/GoogleAuth";
 import "./index.scss";
+import RegisterPage from "./pages/RegisterPage/RegisterPage";
 
 const App: React.FC = () => {
     return (
@@ -17,6 +18,7 @@ const App: React.FC = () => {
                         <Route path="/" element={<HomePage />} />
                         <Route path="/auth/google" element={<GoogleAuth />} />
                         <Route path="*" element={<NotFoundPage />} />
+                        <Route path="/register" element={<RegisterPage />} />
                     </Routes>
                 </div>
             </Router>
