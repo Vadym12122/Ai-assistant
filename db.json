@@ -1,147 +1,34 @@
 {
-  "users": [
-    {
-      "email": "test@example.com",
-      "password": "password123",
-      "id": "d78a"
-    },
-    {
-      "id": "1da8",
-      "email": "vadimkotelets585@gmail.com",
-      "password": "12345",
-      "rememberMe": true
-    },
-    {
-      "id": "4b6a",
-      "email": "vadimkotelets585@gmail.com",
-      "password": "12345",
-      "rememberMe": true
-    },
-    {
-      "id": "8b73",
-      "email": "vadym@gmail.com",
-      "password": "1234",
-      "rememberMe": false
-    },
-    {
-      "id": "cd3c",
-      "email": "vadimkotelets585@gmail.com",
-      "password": "1234545",
-      "rememberMe": true
-    },
-    {
-      "id": "85b9",
-      "email": "a@gmail.com",
-      "password": "12345",
-      "rememberMe": false
-    },
-    {
-      "id": "4911",
-      "email": "a@gmail.com",
-      "password": "qwewq",
-      "rememberMe": false
-    },
-    {
-      "id": "a975",
-      "email": "a@gmail.com",
-      "password": "w",
-      "rememberMe": false
-    },
-    {
-      "id": "75d1",
-      "email": "vadimkotelets585@gmail.com",
-      "password": "123455555",
-      "rememberMe": true
-    },
-    {
-      "id": "98af",
-      "email": "vadimkotelets585@gmail.com",
-      "password": "1212231111111",
-      "rememberMe": false
-    },
-    {
-      "id": "ba68",
-      "email": "vadimkotelets585@gmail.com",
-      "password": "99999999",
-      "rememberMe": false
-    },
-    {
-      "id": "c409",
-      "email": "vadimkotelets585@gmail.com",
-      "password": "88888888",
-      "rememberMe": false
-    },
-    {
-      "id": "d3f7",
-      "email": "vadimkotelets585@gmail.com",
-      "password": "88888888",
-      "rememberMe": false
-    },
-    {
-      "id": "ca29",
-      "email": "vadimkotelets585@gmail.com",
-      "password": "31243132",
-      "rememberMe": true
-    },
-    {
-      "id": "56a4",
-      "email": "vadimkotelets585@gmail.com",
-      "password": "12`2133",
-      "rememberMe": true
-    },
-    {
-      "id": "c6b6",
-      "email": "vadimkotelets585@gmail.com",
-      "password": "12343125",
-      "rememberMe": true
-    },
-    {
-      "id": "4f12",
-      "email": "vadimkotelets585@gmail.com",
-      "password": "1321",
-      "rememberMe": true
-    },
-    {
-      "id": "9f39",
-      "email": "vadimkotelets585@gmail.com",
-      "password": "100000333333",
-      "rememberMe": false
-    },
-    {
-      "id": "9f50",
-      "username": "Vadim",
-      "email": "vadimkotelets585@gmail.com",
-      "password": "Terlkabot0987654321"
-    },
-    {
-      "id": "6a35",
-      "username": "Vadim",
-      "email": "vadimkotelets585@gmail.com",
-      "password": "Terlkabot0987654321"
-    },
-    {
-      "id": "8d4a",
-      "username": "Vadim",
-      "email": "vadimkotelets585@gmail.com",
-      "password": "Terlkabot0987654321"
-    },
-    {
-      "id": "9444",
-      "username": "Vadim",
-      "email": "vadimkotelets585@gmail.com",
-      "password": "Terlkabot0987654321"
-    },
-    {
-      "id": "2e53",
-      "username": "Vadym",
-      "email": "vadimkotelets585@gmail.com",
-      "password": "Terlkabot555"
-    },
-    {
-      "id": "7b6a",
-      "username": "Vadym",
-      "email": "vadimkotelets585@gmail.com",
-      "password": "Terlkabot1230"
-    }
-  ]
+    "users": [
+        {
+            "id": "1da8",
+            "email": "vadimkotelets585@gmail.com",
+            "password": "123456",
+            "rememberMe": true
+        },
+        {
+            "id": "17f5",
+            "username": "Vadym",
+            "email": "vadimkotelets585@gmail.com",
+            "password": "12345678"
+        }
+    ],
+    "threads": [
+        {
+            "id": "1",
+            "title": "Перша розмова",
+            "lastMessage": "Останнє повідомлення в цій розмові...",
+            "timestamp": "2024-09-30T10:00:00Z",
+            "unreadCount": 2,
+            "userId": 1
+        },
+        {
+            "id": "2",
+            "title": "Друга розмова",
+            "lastMessage": "Ще одне останнє повідомлення...",
+            "timestamp": "2024-09-30T12:30:00Z",
+            "unreadCount": 0,
+            "userId": 1
+        }
+    ]
 }

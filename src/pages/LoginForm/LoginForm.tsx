@@ -44,25 +44,28 @@ const LoginForm: React.FC = () => {
         }
 
         try {
-            const response = await fetch("http://localhost:3000/users", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({ email, password, rememberMe }),
-            });
+            // Перевірка, чи існує користувач з таким email
+            const res = await fetch(
+                `http://localhost:3000/users?email=${email}&password=${password}`
+            );
+            const existingUser = await res.json();
 
-            if (!response.ok) {
-                throw new Error("Невірні облікові дані");
+            if (existingUser.length > 0) {
+                // Якщо користувач знайдений, перевіряємо чи пароль збігається
+                const user = existingUser[0];
+
+                if (user.password === password || user.email === email) {
+                    // Користувач з цими даними існує, вхід успішний
+
+                    window.location.href = "/";
+                }
+            } else {
+                setError("Такого користувача немає!");
+                return;
             }
-
-            window.location.href = "/";
-
-            // const data = await response.json();
-
-            // console.log("Успішний вхід", data);
-        } catch (err) {
-            setError("Невірні облікові дані. Спробуйте ще раз.");
+        } catch (error) {
+            console.error("Помилка під час входу:", error);
+            alert("Сталася помилка при вході.");
         }
 
         setEmail("");

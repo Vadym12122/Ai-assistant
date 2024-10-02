@@ -1,42 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import { GoogleLogin } from "@react-oauth/google"; // Імпортуємо компонент GoogleLogin
 import { jwtDecode } from "jwt-decode"; // Для декодування токенів
 import styles from "./GoogleAuth.module.scss";
 
 const GoogleAuth: React.FC = () => {
+    const [message, setMessage] = useState<string | null>(null);
     // Обробка успішного входу
 
     // Описуємо структуру токена
     interface GoogleJwtPayload {
-        name: string;
         email: string;
-        // Додаткові властивості, які можуть бути у токені
+        name: string;
+        sub: string; // Google ID користувача
     }
 
+    // Обробка успішного входу
     const handleSuccess = async (response: any) => {
+        // Декодуємо токен Google
         const decoded = jwtDecode<GoogleJwtPayload>(response.credential);
-        const { name, email } = decoded;
+        const { email, name, sub: googleId } = decoded;
 
-        // Перевірка наявності користувача у базі
-        const res = await fetch("http://localhost:3000/users?email=" + email);
-        const existingUser = await res.json();
+        // Збереження даних користувача в локальне сховище (localStorage)
+        localStorage.setItem("userEmail", email);
+        localStorage.setItem("userName", name);
+        localStorage.setItem("googleId", googleId);
 
-        if (existingUser.length === 0) {
-            // Якщо користувач не існує, створюємо нового
-            await fetch("http://localhost:3000/users", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({ username: name, email }), // Додайте інші поля за потреби
-            });
-        }
-
-        // Збереження токену в localStorage
-        localStorage.setItem("token", response.credential);
-
-        // Перенаправлення на головну сторінку після успішного входу
-        window.location.href = "/";
+        setMessage(`Вітаємо, ${name}! Вхід успішний.`);
+        window.location.href = "/"; // Перенаправлення на головну сторінку
     };
 
     // Обробка помилки при вході
@@ -53,6 +43,7 @@ const GoogleAuth: React.FC = () => {
                 onSuccess={handleSuccess} // Функція для обробки успішного входу
                 onError={handleError} // Функція для обробки помилок
             />
+            {message && <p>{message}</p>}
         </div>
     );
 };

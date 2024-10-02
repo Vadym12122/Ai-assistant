@@ -41,6 +41,18 @@ const RegisterPage: React.FC = () => {
         }
 
         try {
+            const checkUserResponse = await fetch(
+                `http://localhost:3000/users?email=${email}&password=${password}`
+            );
+            const existingUser = await checkUserResponse.json();
+
+            if (existingUser.length > 0) {
+                setError(
+                    "Користувач з таким email вже існує. Будь ласка, увійдіть або використайте інший email."
+                );
+                return;
+            }
+
             const response = await fetch("http://localhost:3000/users", {
                 method: "POST",
                 headers: {
@@ -93,7 +105,7 @@ const RegisterPage: React.FC = () => {
                     onChange={(e) => setConfirmPassword(e.target.value)}
                 />
 
-                {error && <p>{error}</p>}
+                {error && <p className={styles.errorMessage}>{error}</p>}
 
                 <button type="submit" className={styles.form__button}>
                     Зареєструватися

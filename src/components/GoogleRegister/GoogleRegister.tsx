@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styles from "../GoogleAuth/GoogleAuth.module.scss";
 import { GoogleLogin } from "@react-oauth/google";
 import { jwtDecode } from "jwt-decode";
 
@@ -41,7 +42,7 @@ const GoogleRegister: React.FC = () => {
 
     return (
         <div>
-            <h2>Реєстрація через Google</h2>
+            <h2 className={styles.auth}>Реєстрація через Google</h2>
             <GoogleLogin onSuccess={handleSuccess} onError={handleError} />
             {message && <p>{message}</p>}
         </div>
