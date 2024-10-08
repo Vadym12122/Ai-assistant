@@ -1,34 +1,110 @@
 {
-    "users": [
+  "users": [
+    {
+      "id": "1da8",
+      "email": "vadimkotelets585@gmail.com",
+      "password": "123456",
+      "rememberMe": true
+    },
+    {
+      "id": "17f5",
+      "username": "Vadym",
+      "email": "vadimkotelets585@gmail.com",
+      "password": "12345678"
+    }
+  ],
+  "threads": [
+    {
+      "id": "1",
+      "title": "Перша розмова",
+      "timestamp": "2024-09-30T10:00:00Z",
+      "unreadCount": 2,
+      "userId": 1,
+      "messages": [
         {
-            "id": "1da8",
-            "email": "vadimkotelets585@gmail.com",
-            "password": "123456",
-            "rememberMe": true
+          "id": "1728409554066",
+          "sender": "user",
+          "content": "// Встановлюємо повідомлення для бесіди",
+          "type": "text",
+          "timestamp": "2024-10-08T17:45:54.065Z",
+          "messages": []
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Друга розмова",
+      "timestamp": "2024-09-30T12:30:00Z",
+      "unreadCount": 0,
+      "userId": 1,
+      "messages": [
+        {
+          "id": "1728409560274",
+          "sender": "user",
+          "content": "// Встановлюємо повідомлення для бесіди// Встановлюємо повідомлення для бесіди",
+          "type": "text",
+          "timestamp": "2024-10-08T17:46:00.273Z",
+          "messages": []
+        }
+      ]
+    },
+    {
+      "id": "1728399239189",
+      "title": "Нова бесіда 1",
+      "timestamp": "2024-10-08T14:53:59.189Z",
+      "unreadMessages": 0,
+      "userId": "1da8",
+      "messages": [
+        {
+          "id": "1728407644036",
+          "sender": "user",
+          "content": "asfdafbs",
+          "type": "text",
+          "timestamp": "2024-10-08T17:14:04.035Z",
+          "messages": []
+        }
+      ]
+    },
+    {
+      "id": "1728407696590",
+      "title": "Нова бесіда 1",
+      "timestamp": "2024-10-08T17:14:56.590Z",
+      "unreadMessages": 0,
+      "userId": "1da8",
+      "messages": [
+        {
+          "id": "1728407750617",
+          "sender": "user",
+          "content": "{                 \"id\": \"1\",                 \"sender\": \"user\",                 \"content\": \"Привіт!\",                 \"type\": \"text\",                 \"timestamp\": \"2023-10-01T12:00:01Z\"             }",
+          "type": "text",
+          "timestamp": "2024-10-08T17:15:50.616Z",
+          "messages": []
         },
         {
-            "id": "17f5",
-            "username": "Vadym",
-            "email": "vadimkotelets585@gmail.com",
-            "password": "12345678"
-        }
-    ],
-    "threads": [
-        {
-            "id": "1",
-            "title": "Перша розмова",
-            "lastMessage": "Останнє повідомлення в цій розмові...",
-            "timestamp": "2024-09-30T10:00:00Z",
-            "unreadCount": 2,
-            "userId": 1
+          "id": "1728409531619",
+          "sender": "user",
+          "content": "// Встановлюємо повідомлення для бесіди",
+          "type": "text",
+          "timestamp": "2024-10-08T17:45:31.619Z",
+          "messages": []
         },
         {
-            "id": "2",
-            "title": "Друга розмова",
-            "lastMessage": "Ще одне останнє повідомлення...",
-            "timestamp": "2024-09-30T12:30:00Z",
-            "unreadCount": 0,
-            "userId": 1
+          "id": "1728409532633",
+          "sender": "ai",
+          "content": "Це відповідь AI на ваше повідомлення.",
+          "type": "text",
+          "timestamp": "2024-10-08T17:45:32.632Z",
+          "messages": []
+        },
+        {
+          "id": "1728409536274",
+          "sender": "user",
+          "content": "// Встановлюємо повідомлення для бесіди",
+          "type": "text",
+          "timestamp": "2024-10-08T17:45:36.273Z",
+          "messages": []
         }
-    ]
+      ]
+    }
+  ]
 }

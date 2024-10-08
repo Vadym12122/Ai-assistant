@@ -74,7 +74,7 @@ const LoginForm: React.FC = () => {
     };
 
     return (
-        <div>
+        <div className={styles.login}>
             <form className={styles.form} onSubmit={handleSubmit}>
                 <input
                     placeholder="Email"

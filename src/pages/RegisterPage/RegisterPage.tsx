@@ -10,7 +10,6 @@ const RegisterPage: React.FC = () => {
     const [confirmPassword, setConfirmPassword] = useState("");
     const [error, setError] = useState("");
     const [emailValid, setEmailValid] = useState<boolean>(true); // Стан для валідності email
-    const [passwordValid, setPasswordValid] = useState<boolean>(true); // Стан для валідності паролю
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -73,7 +72,7 @@ const RegisterPage: React.FC = () => {
 
     return (
         <div>
-            <h2>Реєстрація</h2>
+            <h2 className={styles.title}>Реєстрація</h2>
             <form className={styles.form} onSubmit={handleSubmit}>
                 <input
                     type="text"
